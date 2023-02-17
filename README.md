@@ -1,2 +1,2 @@
 # 2023_ZAF003_FaceMaskDetection
-Face Mask detection Project (An Deep Learning Project)
+Face Mask detection Project (Deep Learning Project)
