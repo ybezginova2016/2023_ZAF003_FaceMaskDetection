@@ -50,6 +50,7 @@ pip install -r requirements.txt
 
 ## Demo Link
 **Click below for demo**
+[![image](face_mask_detection_preview.jpg)](https://1drv.ms/v/s!AuQ0zVSghQNegtFGIAS2p4cdmRhj4A?e=EKSQ5a)
 
 ## Contributors:
 - Shubham - shubhamwankar
