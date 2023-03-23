@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-MODEL_PATH = "best_model.pth"
+MODEL_PATH = "model.pth"
 
 # Function to load model
 def load_model(path):
