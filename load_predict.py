@@ -6,12 +6,14 @@ from PIL import Image
 
 MODEL_PATH = "best_model.pth"
 
+# Function to load model
 def load_model(path):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = torch.load(path,
                        map_location=device)
     return model
 
+# Function to preprocess image
 def preprocess(img):
     img = Image.fromarray(np.uint8(img))
     preprocess = transforms.Compose([
@@ -25,6 +27,7 @@ def preprocess(img):
     batch_img_tensor = torch.unsqueeze(preprocess_img, 0)
     return batch_img_tensor
 
+# Function to make predictions
 def predict(img, path=MODEL_PATH):
     batch_img_tensor = preprocess(img)
     model = load_model(path)
@@ -41,7 +44,7 @@ def predict(img, path=MODEL_PATH):
         result = 0
     return result, probability
 
-
+# Live Demo capturing facemask using OpenCV
 results={0:'no mask', 1:'mask'}
 GR_dict={0:(0,0,255), 1:(0,255,0)}
 rect_size = 4
